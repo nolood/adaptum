@@ -1,19 +1,6 @@
-import { type FC, type ReactElement, type ReactNode } from "react";
-import {
-  type RenderOptions,
-  render,
-  type RenderResult,
-} from "@testing-library/react";
+import { type FC, type ReactNode } from "react";
+import NextProvider from "~/app/providers/next-provider";
 
-import { ThemeProvider } from "./theme-provider";
 export const Providers: FC<{ children: ReactNode }> = ({ children }) => {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return <NextProvider>{children}</NextProvider>;
 };
-
-const customRender = (
-  ui: ReactElement,
-  options?: Omit<RenderOptions, "wrapper">,
-): RenderResult => render(ui, { wrapper: Providers, ...options });
-
-export * from "@testing-library/react";
-export { customRender };

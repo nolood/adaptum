@@ -1,15 +1,15 @@
-import { type FC, Suspense } from "react";
+import { type FC } from "react";
 import "./styles/globals.css";
 import { Providers } from "~/app/providers";
 import { RouterProvider } from "react-router-dom";
-import { router } from "~/shared/router/router";
+import { router } from "~/shared/router";
 
 const App: FC = () => {
   return (
     <Providers>
-      <Suspense fallback={"Loading..."}>
+      <main className="dark text-foreground bg-background">
         <RouterProvider router={router} />
-      </Suspense>
+      </main>
     </Providers>
   );
 };

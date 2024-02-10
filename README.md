@@ -3,7 +3,7 @@
 # Base
 - React
 - Typescript
-- Shadcnui
+- NextUI
 - react-router-dom
 - tailwindcss
 
